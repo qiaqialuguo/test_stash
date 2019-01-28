@@ -170,7 +170,7 @@ public class ReadDataJDBC {
                         "ending3",// tag
                         ("topic加大批次号" + datatopic + bigbatch + "总条数：" + total.toString() + "读HIVE结束时间：" + sd2).getBytes());// body
                 if (0==total){
-                    logger1.info("数据量为0");
+                    logger1.info(datatopic+"数据量为0");
                     System.exit(1);}
                 String staus = "done";
                 /**
