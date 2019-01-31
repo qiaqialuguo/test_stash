@@ -25,7 +25,11 @@ public class RecordToHttp {
         ForFig2 forFig = new ForFig2();
         Properties properties = forFig.readProperties();
         String httpRecordUrl = properties.getProperty("httpRecordUrl");
-
+        String httptoken = properties.getProperty("httptoken");
+        if (null == httptoken){
+            httptoken = "kedadmp2018";
+        }
+        System.out.println(httptoken);
         CloseableHttpClient httpClient = HttpClients.createDefault();
         String entityStr = null;
         CloseableHttpResponse response = null;
@@ -67,7 +71,7 @@ public class RecordToHttp {
             httpPost.addHeader("User-Agent", "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7.6)");
             // 传输的类型
             httpPost.addHeader("Content-Type", "application/x-www-form-urlencoded");
-            httpPost.addHeader("Token","kedadmp2018");
+            httpPost.addHeader("Token",httptoken);
             httpPost.addHeader("RouteKey","keda70d850");
 
             // 执行请求
