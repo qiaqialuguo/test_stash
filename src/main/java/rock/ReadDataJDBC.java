@@ -40,6 +40,7 @@ public class ReadDataJDBC {
             everynum = Integer.parseInt(properties.getProperty("everynum"));
         }
         final String datatopic = p_dao.mq_topic;
+
         final String nameserver = properties.getProperty("nameserver");
         final String controltopic = properties.getProperty("controltopic");
         final String stopword = properties.getProperty("stopword");
