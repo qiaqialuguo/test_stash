@@ -39,7 +39,6 @@ public class ReadDataJDBC {
         } else {
             everynum = Integer.parseInt(properties.getProperty("everynum"));
         }
-
         final String datatopic = p_dao.mq_topic;
 
         final String nameserver = properties.getProperty("nameserver");
